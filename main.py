@@ -20,7 +20,17 @@ async def on_messge(message):
 
         if msg in hello_worls:
                 await message.channel.send('и тебе привет, человек')
-
+        elif message.content.startswith('help'):
+            await message.channel.send('''1.батарейка
+                                       2.стекло
+                                       3.жестяные банки
+                                       4.фольга
+                                       5.резина
+                                       6.пластик
+                                       7.бумага
+                                       8.список
+                                       9.hi, ку, прив, привет, здравствуйте''')
+        
         elif message.content.startswith('батарейка'):
             await message.channel.send('''Их необходимо сдавать в специальные пункты приема,
                                         которые есть во всех крупных городах страны.
@@ -61,5 +71,4 @@ async def on_messge(message):
                                        7.стекло - более 1000 лет''')
         else:
                await message.channel.send(message.content)
-client.run('MTE4MDE3OTA5NDE2NDQ4ODI3Mw.GeFkRD.Cte91xy-XKbEZLw6lNegFMBpZ6tI_P_yJkWr5w')
-
+client.run('token!!!')
